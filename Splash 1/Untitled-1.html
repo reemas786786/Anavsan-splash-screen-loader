@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Loader - Ring Style</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F4F1F9;
+    }
+
+    .loader {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Rotating ring */
+    .ring {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border: 6px solid #6932D5;
+      border-top: 6px solid transparent;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+    }
+
+    /* Logo in center */
+    .logo {
+      position: absolute;
+      width: 80px; /* Adjust size if needed */
+      height: 80px;
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="ring"></div>
+    <img src="Vector.svg" alt="Logo" class="logo">
+  </div>
+</body>
+</html>
